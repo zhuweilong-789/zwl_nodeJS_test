@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 })
 
 // 首页路由
-app.get('/:id', (req, res) => {
+app.get('/:id.html', (req, res) => {
   console.log('获取的id',req.params.id)
   // 设置响应头
   res.set({
@@ -29,6 +29,16 @@ app.get('/:id', (req, res) => {
 // 创建一个home的post
 app.post('/home', (req, res) => {
   res.end('这是一个post请求')
+})
+
+// 一般响应和其他响应
+app.get('/respost', (req, res)=> {
+  /**
+   * node中的http模块
+   */
+  res.status(208)
+  res.set('zwl', 'zhuweilong');
+  res.end('响应体');
 })
 
 app.listen(3000, () => {
