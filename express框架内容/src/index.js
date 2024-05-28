@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
   res.end('hello 我是首页')
 })
 
-// 首页路由
+// 首页路由,通过id传参来返回一样的
 app.get('/:id.html', (req, res) => {
   console.log('获取的id',req.params.id)
   // 设置响应头

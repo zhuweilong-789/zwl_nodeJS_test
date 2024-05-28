@@ -10,7 +10,7 @@ app.use(express.static(__dirname + '../public'))
 function zhongjianly(req, res, nuxt){
   let {url, ip, query} = req
   console.log(query)
-  console.log('路径',__dirname + '../public')
+  console.log('路径',__dirname + '../public' )
   if(query.code === '521'){
     nuxt()
   }else{
