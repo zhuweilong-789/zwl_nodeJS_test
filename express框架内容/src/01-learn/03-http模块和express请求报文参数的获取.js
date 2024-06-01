@@ -2,7 +2,7 @@ const http = require('http')
 const app = http.createServer((req, res)=> {
   console.log(req.url,req.method)
 })
-266
+
 app.listen(3000,  ()=> {
   console.log('启动了')
 })
